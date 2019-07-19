@@ -2,7 +2,7 @@
   "AWSEBDockerrunVersion": 2,
   "containerDefinitions": [
     {
-      "name": "frontend",
+      "name": "fe",
       "image": "rocky1638/mrr-fe",
       "hostname": "fe",
       "essential": false,
