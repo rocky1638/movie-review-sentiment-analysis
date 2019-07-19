@@ -1,0 +1,29 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "frontend",
+      "image": "rocky1638/mrr-fe",
+      "hostname": "fe",
+      "essential": false
+    },
+    {
+      "name": "api",
+      "image": "rocky1638/mrr-api",
+      "hostname": "api",
+      "essential": false
+    },
+    {
+      "name": "nginx",
+      "image": "rocky1638/mrr-nginx",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": ["frontend", "api"]
+    }
+  ]
+}
