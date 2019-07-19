@@ -3,10 +3,9 @@ services:
   - docker
 
 before_install:
-  - docker build -t rocky1638/react-test -f ./frontend/Dockerfile.dev ./frontend
 
 script:
-  docker run -e CI=true rocky1638/react-test yarn test
+  echo "no tests"
 
 after_success:
   - docker build -t rocky1638/mrr-fe ./frontend
