@@ -26,7 +26,7 @@
           "containerPort": 80
         }
       ],
-      "links": ["frontend", "api"]
+      "links": ["fe", "api"]
     }
   ]
 }
