@@ -1,4 +1,5 @@
 # Movie Review Sentiment Analysis
+[![Build Status](https://travis-ci.org/rocky1638/movie-review-sentiment-analysis.svg?branch=master)](https://travis-ci.org/rocky1638/movie-review-sentiment-analysis)
 
 A small web app built with a **Flask API** and **React** front-end, to classify
 a given movie review as either positive or negative. The app utilizes online
