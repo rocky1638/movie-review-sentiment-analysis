@@ -124,7 +124,7 @@ const ThankYou = ({ reset }) => (
       <Text medium>Feel free to check it out on Github, or try another review.</Text>
     </div>
     <div>
-      <StyledA href="https://github.com/rocky1638/movie-review-sentiment-analysis-api" target="_blank" rel="noopener noreferrer"><i className="fab fa-github" /> Github</StyledA>
+      <StyledA href="https://github.com/rocky1638/movie-review-sentiment-analysis" target="_blank" rel="noopener noreferrer"><i className="fab fa-github" /> Github</StyledA>
       <Button onClick={reset}>🏠 Home</Button>
     </div>
   </StyledCard>
