@@ -1,0 +1,20 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t rocky1638/react-test -f ./frontend/Dockerfile.dev ./frontend
+
+script:
+  docker run -e CI=true rocky1638/react-test yarn test
+
+after_success:
+  - docker build -t rocky1638/mrr-fe ./frontend
+  - docker build -t rocky1638/mrr-api ./api
+  - docker build -t rocky1638/mrr-nginx ./nginx
+
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
+  - docker push rocky1638/mrr-fe
+  - docker push rocky1638/mrr-api
+  - docker push rocky1638/mrr-nginx
