@@ -1,0 +1,17 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+#thumbs-down-text,
+#thumbs-up-text {
+  visibility: hidden;
+}
+
+#thumbs-up:hover ~ #thumbs-up-text {
+  visibility: visible;
+}
+
+#thumbs-down:hover ~ #thumbs-down-text {
+  visibility: visible;
+}
