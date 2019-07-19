@@ -8,9 +8,9 @@ the server is restarted.)_
 The classifier is a simple logistic regression classifier from [ski-kit
 learn](https://scikit-learn.org/), that was tuned using grid search.
 
-This is just the React frontend.
-
 A lot of this code comes from a textbook I've been working through by
 [Sebastian Raschka](https://sebastianraschka.com/). If you want to take a look
 at the book, here it is on [Amazon](https://www.amazon.ca/Python-Machine-Learning-Sebastian-Raschka-ebook/dp/B00YSILNL0).
 
+Sidenote, I also used this project to practice with Docker and CI technologies
+like Travis 👍.

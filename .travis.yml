@@ -17,3 +17,16 @@ after_success:
   - docker push rocky1638/mrr-fe
   - docker push rocky1638/mrr-api
   - docker push rocky1638/mrr-nginx
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  app: MovieReviewAnalysis
+  env: Moviereviewanalysis-env
+  bucket_name: elasticbeanstalk-us-east-1-726141900843
+  bucket_path: moviereviewanalysis
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
