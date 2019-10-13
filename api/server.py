@@ -68,12 +68,14 @@ def feedback():
         y = int(not(y))
     train(review, y)
     sqlite_entry(db, review, y)
-    return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+    return json.dumps
+    ({'success': True}), 200, {'ContentType': 'application/json'}
 
 
 @app.route('/')
 def index():
-    return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+    return json.dumps
+    ({'success': True}), 200, {'ContentType': 'application/json'}
 
 
 if __name__ == '__main__':
